@@ -1,4 +1,4 @@
-package com.example.bruno.onlinecoach;
+package com.example.bruno.onlinecoach.Student;
 
 import java.util.ArrayList;
 import java.util.Date;

@@ -1,12 +1,9 @@
-package com.example.bruno.onlinecoach;
+package com.example.bruno.onlinecoach.Student;
 
 import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -19,19 +16,24 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import com.example.bruno.onlinecoach.Objects.Exercise;
+import com.example.bruno.onlinecoach.R;
+
 public class MainActivity extends AppCompatActivity
         implements
         NavigationView.OnNavigationItemSelectedListener,
         MainMenuFragment.OnFragmentInteractionListener,
         WeightListFragment.OnWeightListFragmentInteractionListener,
         ExerciseListFragment.OnExerciseListFragmentInteractionListener,
-        ProfileFragment.OnFragmentInteractionListener{
+        ProfileFragment.OnFragmentInteractionListener {
 
     FrameLayout main_frame;
     public static final String menuFragmentTag = "main_menu_fragment";
     public static final String weightListFragmentTag = "weight_list_fragment";
     public static final String exerciseListFragmentTag = "exercise_list_fragment";
     public static final String profileFragmentTag = "profile_fragment";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +64,10 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         main_frame = findViewById(R.id.frame);
+
+        //int userType = getIntent().getExtras().getInt("userType");
+
+
         MainMenuFragment mainMenuFragment = new MainMenuFragment();
         getSupportFragmentManager().beginTransaction()
                 .addToBackStack(menuFragmentTag)
@@ -198,4 +204,5 @@ public class MainActivity extends AppCompatActivity
     public void onProfileFragmentInteraction(Uri uri) {
 
     }
+
 }

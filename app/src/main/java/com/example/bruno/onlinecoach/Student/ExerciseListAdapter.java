@@ -1,4 +1,4 @@
-package com.example.bruno.onlinecoach;
+package com.example.bruno.onlinecoach.Student;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,11 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.bruno.onlinecoach.ExerciseListFragment.OnExerciseListFragmentInteractionListener;
+import com.example.bruno.onlinecoach.R;
+import com.example.bruno.onlinecoach.Student.ExerciseListFragment.OnExerciseListFragmentInteractionListener;
+import com.example.bruno.onlinecoach.Objects.Exercise;
 
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapter.ViewHolder> {
 

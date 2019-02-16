@@ -18,7 +18,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:context=".MainMenuFragment">
+        tools:context=".Student.MainMenuFragment">
 
         <LinearLayout
             android:id="@+id/grid_option1"

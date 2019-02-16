@@ -1,4 +1,4 @@
-package com.example.bruno.onlinecoach;
+package com.example.bruno.onlinecoach.Common;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -9,6 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.bruno.onlinecoach.Coach.CoachActivity;
+import com.example.bruno.onlinecoach.Student.MainActivity;
+import com.example.bruno.onlinecoach.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -80,8 +84,18 @@ public class LoginActivity extends AppCompatActivity {
     public void onLoginSuccess() {
         btnLogin.setEnabled(true);
 
-        Intent menu = new Intent(this, MainActivity.class);
-        startActivity(menu);
+
+
+        if(txtEmail.getText().toString().equals("a")){
+            //Coach
+            Intent menu = new Intent(this, CoachActivity.class);
+            startActivity(menu);
+        }else{
+            //Student
+            Intent menu = new Intent(this, MainActivity.class);
+            startActivity(menu);
+        }
+
 
     }
 
